@@ -1,10 +1,5 @@
 import CreateProductUseCase from "./create.product.usecase";
 
-const input = {
-  name: "Product 1",
-  price: 10
-};
-
 const MockRepository = () => {
   return {
     find: jest.fn(),
@@ -16,6 +11,11 @@ const MockRepository = () => {
 
 describe("Unit test create product use case", () => {
   it("should create a product", async () => {
+    const input = {
+      name: "Product 1",
+      price: 10
+    };
+
     const productRepository = MockRepository();
     const productCreateUseCase = new CreateProductUseCase(productRepository);
 
@@ -29,6 +29,11 @@ describe("Unit test create product use case", () => {
   });
 
   it("should thrown an error when name is missing", async () => {
+    const input = {
+      name: "Product 1",
+      price: 10
+    };
+
     const productRepository = MockRepository();
     const productCreateUseCase = new CreateProductUseCase(productRepository);
 
@@ -40,6 +45,11 @@ describe("Unit test create product use case", () => {
   });
 
   it("should thrown an error when price is less than zero", async () => {
+    const input = {
+      name: "Product 1",
+      price: 10
+    };
+    
     const productRepository = MockRepository();
     const productCreateUseCase = new CreateProductUseCase(productRepository);
 

@@ -3,4 +3,8 @@ export interface InputCreateProductDto {
     price: number;
 }
 
-export interface OutputCreateProductDto { }
+export interface OutputCreateProductDto {
+    id: string;
+    name: string;
+    price: number;
+ }
